@@ -1,6 +1,8 @@
 analyzer:
   exclude:
     - lib/data/database/database.g.dart
+    - lib/resources/app_colors.dart
+    - lib/resources/app_images.dart
   plugins:
     - dart_code_metrics
   errors:
@@ -157,7 +159,6 @@ linter:
     - avoid_redundant_argument_values
     - avoid_relative_lib_imports
     - avoid_return_types_on_setters
-    - avoid_returning_null_for_future
     - avoid_returning_this
     - avoid_shadowing_type_parameters
     - avoid_single_cascade_in_expression_statements
