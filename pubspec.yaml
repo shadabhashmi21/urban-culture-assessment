@@ -33,11 +33,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   datasource:
     path: ./datasource
+  firebase_core: ^2.27.1
+  firebase_storage: ^11.6.10
   flutter:
     sdk: flutter
   flutter_hooks: ^0.20.5
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
+  image_picker: ^1.0.7
   syncfusion_flutter_charts: ^25.1.35
 
 
