@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715960513893",
+    "project_id": "urban-c1572",
+    "storage_bucket": "urban-c1572.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715960513893:android:7d1165852120d54a769d8c",
+        "android_client_info": {
+          "package_name": "com.example.urban_culture_assessment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV-nkrJ5LmwonAfJw9UxM7ZxFuu7C5hiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
