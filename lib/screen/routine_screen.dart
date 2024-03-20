@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:urban_culture_assessment/model/daily_skincare_model.dart';
 import 'package:urban_culture_assessment/resources/app_widgets.dart';
 
-class SkincareScreen extends StatelessWidget {
-  const SkincareScreen({super.key});
+class RoutineScreen extends StatelessWidget {
+  const RoutineScreen({super.key});
 
   @override
   Widget build(final BuildContext context) {

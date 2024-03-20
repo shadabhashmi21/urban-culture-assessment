@@ -14,107 +14,113 @@ class StreakScreen extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Today\'s Goal: 3 streak days',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
-                padding: EdgeInsets.all(20),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.peach,
-                  borderRadius: BorderRadius.circular(15),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Today\'s Goal: 3 streak days',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      'Streak Days',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      '2',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
-                    ),
-                  ],
-                ),
-              ),
-              Text(
-                'Daily Streak',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              Text(
-                '2',
-                style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
-              ),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Last 30 Days',
-                      style: TextStyle(color: AppColors.cherry, fontSize: 16),
-                    ),
-                    TextSpan(
-                      text: ' +100%',
-                      style:
-                          TextStyle(color: AppColors.lightGreen, fontSize: 16),
-                    ),
-                  ],
-                ),
-              ),
-              SfCartesianChart(
-                primaryYAxis: CategoryAxis(
-                  isVisible: false,
-                  majorGridLines: MajorGridLines(width: 0),
-                  axisLine: AxisLine(width: 0),
-                ),
-                primaryXAxis: CategoryAxis(
-                  majorGridLines: MajorGridLines(width: 0),
-                  axisLine: AxisLine(width: 0),
-                ),
-                series: _getSplineTypesSeries(),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Text(
-                  'Keep it up! You\'re on a roll.',
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),),
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 12),),
-                    backgroundColor: MaterialStateProperty.all(AppColors.peach),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 20),
+                  padding: EdgeInsets.all(20),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AppColors.peach,
+                    borderRadius: BorderRadius.circular(15),
                   ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Streak Days',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500,),
+                      ),
+                      Text(
+                        '2',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w700,),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  'Daily Streak',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  '2',
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
+                ),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Last 30 Days',
+                        style: TextStyle(color: AppColors.cherry, fontSize: 16),
+                      ),
+                      TextSpan(
+                        text: ' +100%',
+                        style: TextStyle(
+                            color: AppColors.lightGreen, fontSize: 16,),
+                      ),
+                    ],
+                  ),
+                ),
+                SfCartesianChart(
+                  primaryYAxis: CategoryAxis(
+                    isVisible: false,
+                    majorGridLines: MajorGridLines(width: 0),
+                    axisLine: AxisLine(width: 0),
+                  ),
+                  primaryXAxis: CategoryAxis(
+                    majorGridLines: MajorGridLines(width: 0),
+                    axisLine: AxisLine(width: 0),
+                  ),
+                  series: _getSplineTypesSeries(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Text(
-                    'Get Started',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.offBlack,
+                    'Keep it up! You\'re on a roll.',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                        EdgeInsets.symmetric(vertical: 12),
+                      ),
+                      backgroundColor:
+                          MaterialStateProperty.all(AppColors.peach),
+                    ),
+                    child: Text(
+                      'Get Started',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.offBlack,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Divider(
-                color: AppColors.peach,
-                thickness: 2,
-              ),
-            ],
+                Divider(
+                  color: AppColors.peach,
+                  thickness: 2,
+                ),
+              ],
+            ),
           ),
         ),
       );
